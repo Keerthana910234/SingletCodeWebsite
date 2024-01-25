@@ -12,7 +12,7 @@
 
 import sphinx_rtd_theme
 import os, sys
-sys.path.insert(0, os.path.abspath('..'))
+# sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------
@@ -22,7 +22,7 @@ project = u'SingletCode'
 copyright = u'2023, ' + Affiliation
 
 # The full version, including alpha/beta/rc tags
-currentVersion = open(os.path.join("source/VERSION")).read().strip()
+currentVersion = open("VERSION").read().strip()
 release = currentVersion
 
 
@@ -41,7 +41,7 @@ extensions = [
 sphinx_rtd_size_width = "90%"
 
 bibtex_bibfiles = [
-    'source/bibtex/ref.bib'
+    'bibtex/ref.bib'
 ]
 
 todo_include_todos=True
@@ -50,7 +50,7 @@ todo_include_todos=True
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+# source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -73,6 +73,10 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_static_path = ['_static']
+html_css_files = [
+    'custom.css',
+]
 
 # on_rtd is whether we are on readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -81,9 +85,8 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     import sphinx_rtd_theme
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {
-    "body_max_width": "none"
-}
+
+
 
 
 # -- Options for HTML output -------------------------------------------------
