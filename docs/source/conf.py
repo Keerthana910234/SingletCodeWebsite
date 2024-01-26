@@ -1,19 +1,18 @@
 #Adapted from the sphinx-tutorial and https://github.com/tomography/tomobank/blob/master
 
-
 # Configuration file for the Sphinx documentation builder.
-
 # -- Path setup --------------------------------------------------------------
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
+
 
 import sphinx_rtd_theme
 import os, sys
-# sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('..'))
 
+# We require sphinx >=2 because of sphinxcontrib.bibtex,
+needs_sphinx = '2.0'
 
 # -- Project information -----------------------------------------------------
 # General information about the project.
@@ -46,11 +45,9 @@ bibtex_bibfiles = [
 
 todo_include_todos=True
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
 
 # The suffix of source filenames.
-# source_suffix = '.rst'
+source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -73,7 +70,7 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_static_path = ['_static']
+# html_static_path = ['_static']
 html_css_files = [
     'custom.css',
 ]

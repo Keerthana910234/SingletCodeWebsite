@@ -11,8 +11,8 @@ Welcome to the documentation of Singlet Code!
 .. toctree::
    :maxdepth: 2
    
-   source/about
-   source/data
+   about
+   data
       
 
 
