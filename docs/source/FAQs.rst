@@ -8,3 +8,5 @@ Example:
     2. Where can I access the code in the paper?
     3. Does the singlet detection using barcode depend on cell type?
 
+.. contents:: Contents:
+   :local:

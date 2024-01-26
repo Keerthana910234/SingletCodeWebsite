@@ -7,3 +7,6 @@ This page will contain information about singlet code including the need for it,
 .. toctree::
 
    mainSingletCode/about
+
+.. contents:: Contents:
+   :local:

@@ -10,6 +10,7 @@ Singlet code `(link) <https://www.biorxiv.org/content/10.1101/2023.08.04.552078v
 
 .. toctree::
    :maxdepth: 2
+   
    mainIntro
    classifier
    doubletDetectionMethods
