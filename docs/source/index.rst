@@ -12,7 +12,17 @@ Welcome to the documentation of Singlet Code!
    :maxdepth: 2
    
    about
-   data
+   mainIntro
+   classifier
+   doubletDetectionMethods
+   datasetsInfo
+   references
+   FAQs
+   _:ref:`Paper <https://www.biorxiv.org/content/10.1101/2023.08.04.552078v2>`_ 
+   _:ref: `Lab Website <https://www.goyallab.org/>`_
+   _:ref: `Github repository <https://github.com/madelinemelzer/singletCode>`_
+
+
       
 
 

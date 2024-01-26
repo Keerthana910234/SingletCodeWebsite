@@ -83,6 +83,25 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
+# conf.py
+
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',  # needs 'show_related': True theme option to display
+        'searchbox.html',
+        'donate.html',
+        {
+            'title': 'External Links',
+            'children': [
+                '<a href="https://www.biorxiv.org/content/10.1101/2023.08.04.552078v2" target="_blank">Paper</a>',
+                '<a href="https://www.goyallab.org/" target="_blank">Lab Website</a>',
+                '<a href="https://github.com/madelinemelzer/singletCode" target="_blank">Github Repository</a>'
+            ]
+        }
+    ]
+}
 
 
 

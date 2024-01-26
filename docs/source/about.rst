@@ -8,7 +8,7 @@ About
 ..    :width: 320px
 ..    :alt: project
 
-.. bibliography::
+
     
 .. contents:: Contents:
     :local:
