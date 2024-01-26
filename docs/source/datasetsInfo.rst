@@ -7,5 +7,3 @@ This section will contain all the information about the different datasets in di
 
    DatasetsUsed/data
 
-.. contents:: Contents:
-    :local:

@@ -35,7 +35,7 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinx_rtd_size'
+    'sphinx_rtd_size',
 ]
 sphinx_rtd_size_width = "90%"
 
@@ -85,25 +85,13 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 # conf.py
 
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-        'donate.html',
-        {
-            'title': 'External Links',
-            'children': [
-                '<a href="https://www.biorxiv.org/content/10.1101/2023.08.04.552078v2" target="_blank">Paper</a>',
-                '<a href="https://www.goyallab.org/" target="_blank">Lab Website</a>',
-                '<a href="https://github.com/madelinemelzer/singletCode" target="_blank">Github Repository</a>'
-            ]
-        }
-    ]
+html_theme_options = {
+    "style_external_links": True
 }
 
-
+bibtex_bibfiles = [
+    'bibtex/ref.bib',
+    ]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -114,3 +102,5 @@ html_sidebars = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
+
+#Thinsg for sphinx-toolbox
