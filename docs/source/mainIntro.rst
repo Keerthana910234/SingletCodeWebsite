@@ -2,11 +2,15 @@
 Singlet Code
 ===================
 
-This page will contain information about singlet code including the need for it, how is ground truth obtained from barcode information, the process, benchmarking doublet detection methods using this ground truth and the command line interface.
+This section contains information about the need for doublet detection in RNAseq analysis, singlet code detects singlets, how is this data used for benchmarking other doublet detection methods and the command line interface to 
+
+TO-DO:
+Add information about command-line interface and figures. 
 
 .. toctree::
-
-   mainSingletCode/about
+   mainSingletCode/doubletInfo
+   mainSingletCode/working
+   mainSingletCode/benchmarking
 
 .. contents:: Contents:
    :local:

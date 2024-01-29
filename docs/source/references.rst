@@ -2,11 +2,15 @@
 References
 ===============
 
-.. contents:: Contents:
-   :local:
+
    
 References in the website
 
-.. bibliography::
+.. bibliography:: bibtex/ref.bib
+   :style: plain
+   :labelprefix: B
+   :all: 
 
 
+.. contents:: Contents:
+   :local:

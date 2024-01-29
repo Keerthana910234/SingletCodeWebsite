@@ -10,4 +10,4 @@ SingletCode was tested on datasets with many different barcoding techniques, cel
 ..     :class: longtable
 
 .. contents:: Contents:
-    :local:
+   :local:
