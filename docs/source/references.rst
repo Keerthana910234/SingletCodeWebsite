@@ -2,8 +2,6 @@
 References
 ===============
 
-
-   
 References in the website
 
 .. bibliography:: bibtex/ref.bib
