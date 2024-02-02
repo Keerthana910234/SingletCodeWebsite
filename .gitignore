@@ -1,2 +1,4 @@
 _build/
 *.DS_store
+docs_rst/*
+envs_rst/*
