@@ -4,5 +4,4 @@ sphinxcontrib-bibtex >=2, <3
 nbsphinx
 sphinx-lesson
 sphinx_rtd_size
-python
 numpy
