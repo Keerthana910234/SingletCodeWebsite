@@ -6,7 +6,10 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 # SOURCEDIR     = source
-BUILDDIR      = build
+BUILDDIR      = _build
+SOURCEDIR     = docs
+
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
 
 # Put it first so that "make" without argument is like "make help".
 # help:
@@ -19,7 +22,6 @@ BUILDDIR      = build
 # %: Makefile
 # 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-BUILDDIR      = _build
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
