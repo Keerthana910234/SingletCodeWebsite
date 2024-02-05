@@ -15,7 +15,7 @@ env:
   # builds and fail on any warnings.
   #SPHINXOPTS: "-W --keep-going -T"
   GENERATE_PDF: true          # to enable, must be 'true' lowercase
-  GENERATE_SINGLEHTML: true   # to enable, must be 'true' lowercase
+  GENERATE_SINGLEHTML: false   # to enable, must be 'true' lowercase
   PDF_FILENAME: singletCode.pdf
   MULTIBRANCH: true    # to enable, must be 'true' lowercase
 
