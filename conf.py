@@ -21,7 +21,7 @@ project = u'SingletCode'
 copyright = u'2023, ' + Affiliation
 
 # The full version, including alpha/beta/rc tags
-currentVersion = open("VERSION").read().strip()
+currentVersion = open("docs/VERSION").read().strip()
 release = currentVersion
 
 
