@@ -167,6 +167,6 @@ jobs:
         if: ${{ github.event_name == 'push' && ( env.MULTIBRANCH == 'true' || github.ref == format('refs/heads/{0}', env.DEFAULT_BRANCH )) }}
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PT_S }}
           publish_dir: _gh-pages/
           force_orphan: true
