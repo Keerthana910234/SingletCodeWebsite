@@ -86,33 +86,33 @@ jobs:
           # fixes also need to propagate to other themes):
           #   https://github.com/sphinx-doc/sphinx/pull/8524
           #   https://github.com/readthedocs/sphinx_rtd_theme/pull/1025
-          sed -i 's/url_root="#"/url_root=""/' _build/dirhtml/index.html || true
+          sed -i 's/url_root="#"/url_root=""/' /dirhtml/index.html || true
 
       # singlehtml
       - name: Generate singlehtml
         if: ${{ env.GENERATE_SINGLEHTML == 'true' }}
         run: |
           make singlehtml
-          mv _build/singlehtml/ _build/dirhtml/singlehtml/
+          mv /singlehtml/ /dirhtml/singlehtml/
 
       # PDF if requested
       - name: Generate PDF
         if: ${{ env.GENERATE_PDF == 'true' }}
         run: |
-          pip install https://github.com/rkdarst/sphinx_pyppeteer_builder/archive/refs/heads/main.zip
+          pip install https://github.com/rkdarst/sphinx_pyppeteerer/archive/refs/heads/main.zip
           make pyppeteer
-          mv _build/pyppeteer/*.pdf _build/dirhtml/${PDF_FILENAME}
+          mv /pyppeteer/*.pdf /dirhtml/${PDF_FILENAME}
 
       # Stage all deployed assets in _gh-pages/ for simplicity, and to
       # prepare to do a multi-branch deployment.
       - name: Copy deployment data to _gh-pages/
         if: ${{ github.event_name == 'push' }}
         run:
-          rsync -a _build/dirhtml/ _gh-pages/
+          rsync -a /dirhtml/ _gh-pages/
 
-      - name: List _build/dirhtml content
+      - name: List /dirhtml content
         run: |
-          ls -lah _build/dirhtml/
+          ls -lah /dirhtml/
 
       - name: Ensure _gh-pages directory exists
         run: |
@@ -121,7 +121,7 @@ jobs:
 
       - name: Copy directory content as fallback
         run: |
-          cp -r _build/dirhtml/. _gh-pages/
+          cp -r /dirhtml/. _gh-pages/
 
 
       # Use gh-pages-multibranch to multiplex different branches into
