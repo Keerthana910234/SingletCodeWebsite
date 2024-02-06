@@ -148,30 +148,13 @@ jobs:
           name: gh-pages-build
           path: _gh-pages/
 
-  # Deploy in a separate job so that write permissions are restricted
-  # to the minimum steps.
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    needs: build
-    # This if can't use the env context - find better way later.
-    if: ${{ github.event_name == 'push' }}
-    permissions:
-      contents: write
-
-    steps:
-      - name: Debug conditions
+      - name: Deploy
         run: |
           echo "Event: ${{ github.event_name }}"
           echo "MULTIBRANCH: ${{ env.MULTIBRANCH }}"
           echo "Current ref: ${{ github.ref }}"
           echo "Default branch ref: refs/heads/${{ env.DEFAULT_BRANCH }}"
-      - uses: actions/download-artifact@v3
-        if: ${{ github.event_name == 'push' && ( env.MULTIBRANCH == 'true' || github.ref == format('refs/heads/{0}', env.DEFAULT_BRANCH )) }}
-        with:
-          name: gh-pages-build
-          path: _gh-pages/
-
+      
       # As of 2023, we could publish to pages via a Deployment.  This
       # isn't done yet to give it time to stabilize (out of beta), and
       # also having a gh-pages branch to check out is rather
