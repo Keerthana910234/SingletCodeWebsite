@@ -159,11 +159,11 @@ jobs:
     permissions:
       contents: write
       - name: Debug conditions
-      run: |
-        echo "Event: ${{ github.event_name }}"
-        echo "MULTIBRANCH: ${{ env.MULTIBRANCH }}"
-        echo "Current ref: ${{ github.ref }}"
-        echo "Default branch ref: refs/heads/${{ env.DEFAULT_BRANCH }}"
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          echo "MULTIBRANCH: ${{ env.MULTIBRANCH }}"
+          echo "Current ref: ${{ github.ref }}"
+          echo "Default branch ref: refs/heads/${{ env.DEFAULT_BRANCH }}"
 
     steps:
       - uses: actions/download-artifact@v3
