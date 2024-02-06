@@ -110,6 +110,20 @@ jobs:
         run:
           rsync -a _build/dirhtml/ _gh-pages/
 
+      - name: List _build/dirhtml content
+        run: |
+        ls -lah _build/dirhtml/
+
+      - name: Ensure _gh-pages directory exists
+        run: |
+        mkdir -p _gh-pages/
+        ls -lah _gh-pages/
+
+      - name: Copy directory content as fallback
+        run: |
+        cp -r _build/dirhtml/. _gh-pages/
+
+
       # Use gh-pages-multibranch to multiplex different branches into
       # one deployment. See
       # https://github.com/coderefinery/gh-pages-multibranch
