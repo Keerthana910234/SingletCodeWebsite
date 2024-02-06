@@ -21,7 +21,7 @@ project = u'SingletCode'
 copyright = u'2023, ' + Affiliation
 
 # The full version, including alpha/beta/rc tags
-currentVersion = open("docs/VERSION").read().strip()
+currentVersion = open("./VERSION").read().strip()
 release = currentVersion
 
 
@@ -40,7 +40,7 @@ extensions = [
 sphinx_rtd_size_width = "90%"
 
 bibtex_bibfiles = [
-    'docs/bibtex/ref.bib'
+    './bibtex/ref.bib'
 ]
 
 todo_include_todos=True
@@ -53,7 +53,7 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'docs/index'
+master_doc = 'index'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -86,7 +86,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # }
 
 bibtex_bibfiles = [
-    'docs/bibtex/ref.bib',
+    './bibtex/ref.bib',
     ]
 
 # -- Options for HTML output -------------------------------------------------

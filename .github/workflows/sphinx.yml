@@ -119,11 +119,6 @@ jobs:
           mkdir -p _gh-pages/
           ls -lah _gh-pages/
 
-      - name: Copy directory content as fallback
-        run: |
-          cp -r ./dirhtml/. _gh-pages/
-
-
       # Use gh-pages-multibranch to multiplex different branches into
       # one deployment. See
       # https://github.com/coderefinery/gh-pages-multibranch
